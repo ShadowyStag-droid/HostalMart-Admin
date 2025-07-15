@@ -1,0 +1,45 @@
+/* Section blocks for admin dashboard */
+.section-block {
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Full-width helper */
+.full-width {
+  width: 100%;
+}
+
+/* Success & Danger Buttons */
+.success-btn {
+  background: #28a745;
+}
+.success-btn:hover {
+  background: #218838;
+}
+.danger-btn {
+  background: #dc3545;
+}
+.danger-btn:hover {
+  background: #c82333;
+}
+
+/* Admin product images */
+.product-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Expand form-grid columns on desktop */
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+  }
+}
+

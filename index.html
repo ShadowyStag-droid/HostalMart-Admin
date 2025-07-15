@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HostelMart Admin</title>
+  <!-- Main HostelMart Theme -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Admin Overrides -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-content">
+      <h1>🛠️ HostelMart Admin</h1>
+      <p class="tagline">Manage Products & Orders</p>
+    </div>
+    <nav class="nav-buttons">
+      <button id="logoutBtn" class="nav-btn hidden">Logout</button>
+    </nav>
+  </header>
+
+  <!-- Admin Login -->
+  <section id="admin-login" class="login-container">
+    <h2>Admin Login</h2>
+    <form>
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit" class="nav-btn full-width">Login</button>
+    </form>
+  </section>
+
+  <!-- Admin Content (hidden by default) -->
+  <section id="admin-content" class="hidden">
+    <!-- Product Form -->
+    <div class="section-block">
+      <h2>Add / Edit Product</h2>
+      <form id="product-form" class="form-grid">
+        <input type="text" id="name" placeholder="Product Name" required />
+        <input type="number" id="price" placeholder="Price ₹" required />
+        <input type="text" id="category" placeholder="Category" required />
+        <input type="url" id="imageUrl" placeholder="Image URL (optional)" />
+        <input type="hidden" id="productId" />
+        <button type="submit" class="nav-btn success-btn">Save</button>
+      </form>
+    </div>
+
+    <!-- Products List -->
+    <div class="section-block">
+      <h2>Products</h2>
+      <div id="productsContainer" class="product-grid"></div>
+    </div>
+
+    <!-- Orders List -->
+    <div class="section-block">
+      <h2>Orders</h2>
+      <button id="clearAllOrdersBtn" class="nav-btn danger-btn">Mark All Delivered</button>
+      <div id="ordersContainer" class="product-grid"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 HostelMart</p>
+  </footer>
+
+  <!-- Firebase and script -->
+  <script type="module" src="firebaseConfig.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
